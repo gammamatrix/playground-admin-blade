@@ -1,0 +1,51 @@
+openapi: 3.0.3
+servers:
+  -
+    url: 'https://api.example.com'
+    description: 'Production server'
+  -
+    url: 'https://api.staging.example.com'
+    description: 'Staging server'
+  -
+    url: 'https://api.dev.example.com'
+    description: 'Dev server'
+info:
+  title: Playground Admin Resource
+  description: ''
+  termsOfService: ''
+  contact:
+    email: support@example.com
+  version: 73.0.0
+externalDocs:
+  description: ''
+  url: ''
+tags:
+  -
+    name: User
+    description: 'Manage users in storage.'
+  -
+    name: Setting
+    description: 'Manage settings in storage.'
+paths:
+  '/resource/settings/{id}':
+    $ref: paths/settings/id.yml
+  /resource/settings:
+    $ref: paths/settings/index.yml
+  '/resource/settings/lock/{id}':
+    $ref: paths/settings/lock.yml
+  '/resource/settings/restore/{id}':
+    $ref: paths/settings/restore.yml
+  '/resource/users/{id}':
+    $ref: paths/users/id.yml
+  /resource/users:
+    $ref: paths/users/index.yml
+  '/resource/users/lock/{id}':
+    $ref: paths/users/lock.yml
+  '/resource/users/restore/{id}':
+    $ref: paths/users/restore.yml
+components:
+  schemas:
+    User:
+      $ref: models/user.yml
+    Setting:
+      $ref: models/setting.yml

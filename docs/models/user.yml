@@ -1,0 +1,234 @@
+description: 'The Playground User model.'
+type: object
+properties:
+  id:
+    description: 'The primary key.'
+    type: string
+    format: uuid
+    readOnly: true
+  created_by_id:
+    description: 'Foreign key: links a created by user to this user.'
+    type: string
+    format: uuid
+    nullable: true
+  modified_by_id:
+    description: 'Foreign key: links a modified by user to this user.'
+    type: string
+    format: uuid
+    nullable: true
+  user_type:
+    description: 'The user type of this user.'
+    type: string
+    nullable: true
+  created_at:
+    description: 'Denotes the date and time, the user was created.'
+    type: string
+    format: date-time
+    readOnly: true
+  updated_at:
+    description: 'Denotes the date and time, the user was last modified.'
+    type: string
+    format: date-time
+    readOnly: true
+  deleted_at:
+    description: 'Denotes the date and time, the user was put in the trash.'
+    type: string
+    format: date-time
+    nullable: true
+  banned_at:
+    description: 'The banned at date for this user.'
+    type: string
+    format: date-time
+    nullable: true
+  resolved_at:
+    description: 'The resolved at date for this user.'
+    type: string
+    format: date-time
+    nullable: true
+  suspended_at:
+    description: 'The suspended at date for this user.'
+    type: string
+    format: date-time
+    nullable: true
+  gids:
+    description: 'Permissions: gids'
+    type: integer
+    format: int64
+  po:
+    description: 'Permissions: po'
+    type: integer
+    format: int32
+  pg:
+    description: 'Permissions: pg'
+    type: integer
+    format: int32
+  pw:
+    description: 'Permissions: pw'
+    type: integer
+    format: int32
+  status:
+    description: 'The status of the user.'
+    type: integer
+    format: int64
+  rank:
+    description: 'Status: rank'
+    type: integer
+    format: int64
+  size:
+    description: 'Status: size'
+    type: integer
+    format: int64
+  icon:
+    description: 'Ui: icon'
+    type: string
+    maxLength: 128
+  image:
+    description: 'Ui: image'
+    type: string
+    maxLength: 512
+  avatar:
+    description: 'Ui: avatar'
+    type: string
+    maxLength: 512
+  ui:
+    description: 'The ui of the user.'
+    type: object
+    nullable: true
+  active:
+    description: 'Flags: active'
+    type: boolean
+  banned:
+    description: 'Flags: banned'
+    type: boolean
+  flagged:
+    description: 'Flags: flagged'
+    type: boolean
+  internal:
+    description: 'Flags: internal'
+    type: boolean
+  locked:
+    description: 'Flags: locked'
+    type: boolean
+  problem:
+    description: 'Flags: problem'
+    type: boolean
+  suspended:
+    description: 'Flags: suspended'
+    type: boolean
+  unknown:
+    description: 'Flags: unknown'
+    type: boolean
+  name:
+    description: 'The name of the user.'
+    type: string
+    maxLength: 255
+  email:
+    description: 'The email of the user.'
+    type: string
+    maxLength: 255
+  password:
+    description: 'The password of the user.'
+    type: string
+    maxLength: 255
+  phone:
+    description: 'Encrypted: The phone of the user.'
+    type: string
+    maxLength: 255
+  locale:
+    description: 'The locale of the user.'
+    type: string
+    maxLength: 255
+  timezone:
+    description: 'The timezone of the user.'
+    type: string
+    maxLength: 255
+  label:
+    description: 'The label of the user.'
+    type: string
+    maxLength: 128
+  title:
+    description: 'The title of the user.'
+    type: string
+    maxLength: 255
+  byline:
+    description: 'The byline of the user.'
+    type: string
+    maxLength: 255
+  slug:
+    description: 'The slug of the user.'
+    type: string
+    maxLength: 128
+    nullable: true
+  url:
+    description: 'The url of the user.'
+    type: string
+    maxLength: 512
+  description:
+    description: 'The description of the user.'
+    type: string
+    maxLength: 512
+  introduction:
+    description: 'The introduction of the user.'
+    type: string
+    maxLength: 512
+  content:
+    description: 'The content of the user. Allows HTML.'
+    type: string
+    nullable: true
+  summary:
+    description: 'The summary of the user. Allows HTML.'
+    type: string
+    nullable: true
+  abilities:
+    description: 'JSON: abilities'
+    type: object
+    nullable: true
+  accounts:
+    description: 'Encrypted: accounts'
+    type: object
+    nullable: true
+  address:
+    description: 'Encrypted: address'
+    type: object
+    nullable: true
+  contact:
+    description: 'Encrypted: contact'
+    type: object
+    nullable: true
+  meta:
+    description: 'Encrypted: meta'
+    type: object
+    nullable: true
+  notes:
+    description: 'Encrypted: notes'
+    type: object
+    items:
+      type: object
+    nullable: true
+  options:
+    description: 'Encrypted: options'
+    type: object
+    nullable: true
+  registration:
+    description: 'Encrypted: registration'
+    type: object
+    nullable: true
+  roles:
+    description: 'JSON: roles'
+    type: array
+    items:
+      type: string
+  permissions:
+    description: 'JSON: permissions'
+    type: array
+    items:
+      type: string
+  privileges:
+    description: 'JSON: privileges'
+    type: array
+    items:
+      type: string
+  sources:
+    description: 'Encrypted: sources'
+    type: object
+    nullable: true

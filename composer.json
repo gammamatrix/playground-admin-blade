@@ -1,0 +1,73 @@
+{
+    "name": "gammamatrix/playground-admin-resource",
+    "description": "Playground: Provides an API and a Blade UI for interacting with Playground Admin, a gement System for Laravel applications.",
+    "keywords": [
+        "admin",
+        "site administration",
+        "gammamatrix",
+        "laravel",
+        "playground-blade",
+        "playground"
+    ],
+    "homepage": "https://github.com/gammamatrix/playground-admin-resource",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:gammamatrix/playground-admin.git"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "gammamatrix/playground-http": "dev-develop|dev-master|dev-feature/*|^73.0",
+        "gammamatrix/playground-site-blade": "dev-develop|dev-master|dev-feature/*|^73.0",
+        "gammamatrix/playground-admin": "dev-develop|dev-master|dev-feature/*|^73.0"
+    },
+    "require-dev": {
+        "gammamatrix/playground-test": "dev-develop|dev-master|dev-feature/*|^73.0",
+        "tomasvotruba/bladestan": "^0.5.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Playground\\Admin\\Resource\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Feature\\Playground\\Admin\\Resource\\": "tests/Feature/",
+            "Tests\\Unit\\Playground\\Admin\\Resource\\": "tests/Unit/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": {
+            "gammamatrix/*": "source",
+            "*": "dist"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "73.x-dev",
+            "dev-master": "73.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Playground\\Admin\\Resource\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/php-cs-fixer fix",
+        "analyse": "vendor/bin/phpstan analyse --verbose --debug --level max"
+    }
+}

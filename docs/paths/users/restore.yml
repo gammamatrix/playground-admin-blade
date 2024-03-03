@@ -1,0 +1,30 @@
+parameters:
+  -
+    in: path
+    name: id
+    required: true
+    description: 'The user id.'
+    schema:
+      type: string
+      format: uuid
+put:
+  tags:
+    - User
+  summary: 'Restore a user by id.'
+  operationId: restore_user
+  responses:
+    200:
+      description: 'The restored user.'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: ../../models/user.yml
+              meta:
+                type: object
+    401:
+      description: Unauthorized
+    403:
+      description: Forbidden
