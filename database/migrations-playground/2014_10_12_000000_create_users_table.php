@@ -126,6 +126,8 @@ return new class extends Migration
             $table->json('privileges')
                 ->default(new Expression('(JSON_ARRAY())'))
                 ->comment('Array of privilege strings');
+            $table->longText('sources')
+                ->comment('Encrypted array of sources');
 
         });
     }
