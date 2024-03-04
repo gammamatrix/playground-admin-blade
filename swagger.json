@@ -18,9 +18,6 @@
     "title": "Playground Admin Resource",
     "description": "",
     "termsOfService": "",
-    "contact": {
-      "email": "support@example.com"
-    },
     "version": "73.0.0"
   },
   "externalDocs": {
