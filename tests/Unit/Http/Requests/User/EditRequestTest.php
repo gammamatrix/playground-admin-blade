@@ -6,20 +6,20 @@
 
 namespace Tests\Unit\Playground\Admin\Resource\Http\Requests\User;
 
-use Playground\Admin\Resource\Http\Requests\User\CreateRequest;
+use Playground\Admin\Resource\Http\Requests\User\EditRequest;
 use Tests\Unit\Playground\Admin\Resource\Http\Requests\RequestTestCase;
 
 /**
- * \Tests\Unit\Playground\Admin\Resource\Http\Requests\User\CreateRequestTest
+ * \Tests\Unit\Playground\Admin\Resource\Http\Requests\User\EditRequestTest
  *
  */
-class CreateRequestTest extends RequestTestCase
+class EditRequestTest extends RequestTestCase
 {
-    protected string $requestClass = CreateRequest::class;
+    protected string $requestClass = EditRequest::class;
 
     public function test_return_playground_rules(): void
     {
-        $instance = new CreateRequest;
+        $instance = new EditRequest;
 
         $rules = $instance->rules();
 
@@ -83,7 +83,7 @@ class CreateRequestTest extends RequestTestCase
         config([
             'playground-admin-resource.users.rules' => 'laravel',
         ]);
-        $instance = new CreateRequest;
+        $instance = new EditRequest;
 
         $rules = $instance->rules();
 

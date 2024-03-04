@@ -26,7 +26,7 @@ trait UserProvider
         $uc = config('auth.providers.users.model', '\\App\\Models\\User');
 
         if (! is_string($uc) || ! $uc || ! class_exists($uc)) {
-            throw new ValueError(__('playground-admin-resource.admin.users.provider.invalid', [
+            throw new ValueError(__('playground-admin-resource::admin.users.provider.invalid', [
                 'user-class' => is_string($uc) ? $uc : gettype($uc),
             ]));
         }

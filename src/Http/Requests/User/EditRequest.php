@@ -53,7 +53,7 @@ class EditRequest extends FormRequest
         'image' => ['string'],
         'avatar' => ['string'],
         'ui' => ['nullable', 'array'],
-        'assets' => ['nullable', 'array'],
+        'abilities' => ['nullable', 'array'],
         'meta' => ['nullable', 'array'],
         'options' => ['nullable', 'array'],
         'sources' => ['nullable', 'array'],

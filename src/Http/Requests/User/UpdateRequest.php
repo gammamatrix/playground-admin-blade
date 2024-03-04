@@ -30,7 +30,6 @@ class UpdateRequest extends BaseUpdateRequest
         'flagged' => ['boolean'],
         'internal' => ['boolean'],
         'locked' => ['boolean'],
-        'planned' => ['boolean'],
         'problem' => ['boolean'],
         'suspended' => ['boolean'],
         'unknown' => ['boolean'],
@@ -70,7 +69,7 @@ class UpdateRequest extends BaseUpdateRequest
         '_return_url' => ['nullable', 'url'],
     ];
 
-    protected string $slug_table = 'users';
+    protected string $slug_table = '';
 
     /**
      * Prepare the data for validation.
@@ -79,11 +78,11 @@ class UpdateRequest extends BaseUpdateRequest
      */
     protected function prepareForValidation()
     {
-        $table = config('playground-admin-resource.users.table');
+        // $table = config('playground-admin-resource.users.table');
 
-        if (! empty($table) && is_string($table)) {
-            $this->slug_table = $table;
-        }
+        // if (! empty($table) && is_string($table)) {
+        //     $this->slug_table = $table;
+        // }
 
         parent::prepareForValidation();
 
@@ -99,19 +98,19 @@ class UpdateRequest extends BaseUpdateRequest
         $this->filterSystemFields($input);
 
         if ($this->exists('title')) {
-            $input['title'] = isset($input['title']) ? $this->filterHtml($input['title']) : '';
+            $input['title'] = $this->filterHtml($this->input('title'));
         }
 
         if ($this->exists('label')) {
-            $input['label'] = isset($input['label']) ? $this->filterHtml($input['label']) : '';
+            $input['label'] = $this->filterHtml($this->input('label'));
         }
 
         if ($this->exists('phone')) {
-            $input['phone'] = isset($input['phone']) ? $this->filterPhone($input['phone']) : '';
+            $input['phone'] = $this->filterPhone($this->input('phone'));
         }
 
         if ($this->exists('timezone')) {
-            $input['timezone'] = isset($input['timezone']) ? $this->filterHtml($input['timezone']) : '';
+            $input['timezone'] = $this->filterHtml($this->input('timezone'));
         }
 
         if (! empty($input)) {
