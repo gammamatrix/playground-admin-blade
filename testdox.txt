@@ -5,7 +5,14 @@ Create Request (Tests\Unit\Playground\Admin\Resource\Http\Requests\Setting\Creat
  [x] Request instance
 
 Create Request (Tests\Unit\Playground\Admin\Resource\Http\Requests\User\CreateRequest)
+ [x] Return playground rules
  [x] Request instance
+ [x] Return laravel rules
+
+Edit Request (Tests\Unit\Playground\Admin\Resource\Http\Requests\User\EditRequest)
+ [x] Return playground rules
+ [x] Request instance
+ [x] Return laravel rules
 
 Index Route (Tests\Feature\Playground\Admin\Resource\Http\Controllers\Playground\IndexRoute)
  [x] Guest cannot render index view
@@ -13,6 +20,9 @@ Index Route (Tests\Feature\Playground\Admin\Resource\Http\Controllers\Playground
 
 Instance (Tests\Feature\Playground\Admin\Resource\Http\Requests\FormRequest\Instance)
  [x] FormRequest authorize with admin
+
+Instance (Tests\Unit\Playground\Admin\Resource\Http\Controllers\UserController\Instance)
+ [x] UserProvidergetUserClass with invalid user class
 
 Instance (Tests\Unit\Playground\Admin\Resource\Http\Requests\FormRequest\Instance)
  [x] FormRequest authorize without user
@@ -104,6 +114,22 @@ Setting Route (Tests\Feature\Playground\Admin\Resource\Http\Controllers\Playgrou
  [x] Json destroy as admin and succeed and ignore redirect
  [x] Destroy as user and get denied and no force delete allowed
  [x] Json destroy as user and get denied and no force delete allowed
+
+Store Request (Tests\Unit\Playground\Admin\Resource\Http\Requests\User\StoreRequest)
+ [x] Return playground rules
+ [x] Request instance
+ [x] Return laravel rules
+ [x] PrepareForValidation for laravel
+ [x] PrepareForValidation for playground
+ [x] PrepareForValidation parameters
+
+Update Request (Tests\Unit\Playground\Admin\Resource\Http\Requests\User\UpdateRequest)
+ [x] Return playground rules
+ [x] Request instance
+ [x] Return laravel rules
+ [x] PrepareForValidation for laravel
+ [x] PrepareForValidation for playground
+ [x] PrepareForValidation parameters
 
 User Route (Tests\Feature\Playground\Admin\Resource\Http\Controllers\Playground\UserRoute)
  [x] Guest cannot render index view
