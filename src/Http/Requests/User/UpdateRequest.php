@@ -97,14 +97,6 @@ class UpdateRequest extends BaseUpdateRequest
         $this->filterStatus($input);
         $this->filterSystemFields($input);
 
-        if ($this->exists('title')) {
-            $input['title'] = $this->filterHtml($this->input('title'));
-        }
-
-        if ($this->exists('label')) {
-            $input['label'] = $this->filterHtml($this->input('label'));
-        }
-
         if ($this->exists('phone')) {
             $input['phone'] = $this->filterPhone($this->input('phone'));
         }

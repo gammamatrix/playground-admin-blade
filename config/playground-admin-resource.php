@@ -46,9 +46,9 @@ return [
         ],
         'user' => [
             'playground-admin-resource:user:view',
-            'playground-admin-resource:user:viewAny',
+            // 'playground-admin-resource:user:viewAny',
             'playground-admin-resource:setting:view',
-            'playground-admin-resource:setting:viewAny',
+            // 'playground-admin-resource:setting:viewAny',
         ],
         // 'guest' => [
         //     'deny',
