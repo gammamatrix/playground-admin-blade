@@ -26,7 +26,7 @@ return [
         'rules' => env('PLAYGROUND_ADMIN_RESOURCE_USERS_RULES', 'playground'),
         // 'rules' => env('PLAYGROUND_ADMIN_RESOURCE_USERS_RULES', 'laravel'),
         // TODO setting the table could be dynamic
-        'table' => env('PLAYGROUND_ADMIN_RESOURCE_USERS_TABLE', 'users'),
+        // 'table' => env('PLAYGROUND_ADMIN_RESOURCE_USERS_TABLE', 'users'),
     ],
     'sitemap' => [
         'enable' => (bool) env('PLAYGROUND_ADMIN_RESOURCE_SITEMAP_ENABLE', true),
@@ -46,9 +46,9 @@ return [
         ],
         'user' => [
             'playground-admin-resource:user:view',
-            'playground-admin-resource:user:viewAny',
+            // 'playground-admin-resource:user:viewAny',
             'playground-admin-resource:setting:view',
-            'playground-admin-resource:setting:viewAny',
+            // 'playground-admin-resource:setting:viewAny',
         ],
         // 'guest' => [
         //     'deny',

@@ -6,37 +6,47 @@ $validated = [];
 ?>
 @extends('playground::layouts.resource.index', [
     'withTableColumns' => [
-        'title' => [
+        'name' => [
             'linkType' => 'id',
             'linkRoute' => sprintf('%1$s.show', $meta['info']['model_route']),
+            'label' => 'Name',
+        ],
+        'email' => [
+            'label' => 'Email',
+        ],
+        'locale' => [
+            'hide-sm' => true,
+            'label' => 'Locale',
+        ],
+        'timezone' => [
+            'hide-sm' => true,
+            'label' => 'Timezone',
+        ],
+        'title' => [
+            'hide-sm' => true,
             'label' => 'Title',
         ],
         'label' => [
             'hide-sm' => true,
-            'linkType' => 'id',
-            // 'linkRoute' => sprintf('%1$s.show', $apiInfo['model_route']),
             'label' => 'Label',
         ],
-        'slug' => [
-            'hide-sm' => true,
-            'linkType' => 'slug',
-            'linkRoute' => sprintf('%1$s.slug', $meta['info']['model_route']),
-            'label' => 'Slug',
-        ],
         'active' => [
+            'hide-sm' => true,
             'flag' => true,
             'label' => 'Active',
             'onTrueClass' => 'fas fa-check text-success',
         ],
+        'banned' => [
+            'hide-sm' => true,
+            'flag' => true,
+            'label' => 'Banned',
+            'onTrueClass' => 'fa-solid fa-ban text-warning',
+        ],
         'locked' => [
+            'hide-sm' => true,
             'flag' => true,
             'label' => 'Locked',
             'onTrueClass' => 'fas fa-lock text-success',
-        ],
-        'published' => [
-            'flag' => true,
-            'label' => 'Published',
-            'onTrueClass' => 'fas fa-upload text-primary',
         ],
         'flagged' => [
             'hide-sm' => true,
@@ -44,45 +54,23 @@ $validated = [];
             'label' => 'Flagged',
             'onTrueClass' => 'fas fa-flag text-warning',
         ],
-        'allow_public' => [
+        'problem' => [
             'hide-sm' => true,
             'flag' => true,
-            'label' => 'Public',
-            // 'onFalseClass' => 'fas fa-user text-danger',
-            'onTrueClass' => 'fas fa-users text-success',
+            'label' => 'Problem',
+            'onTrueClass' => 'fa-solid fa-triangle-exclamation text-danger',
         ],
-        'only_admin' => [
+        'suspended' => [
             'hide-sm' => true,
             'flag' => true,
-            'label' => 'Admin Only',
-            // 'onFalseClass' => 'fas fa-user text-danger',
-            'onTrueClass' => 'fas fa-user-shield text-danger',
+            'label' => 'Suspended',
+            'onTrueClass' => 'fa-solid fa-hand text-danger',
         ],
-        'only_user' => [
+        'unknown' => [
             'hide-sm' => true,
             'flag' => true,
-            'label' => 'User Only',
-            // 'onFalseClass' => 'fas fa-user text-danger',
-            'onTrueClass' => 'fas fa-user text-warning',
-        ],
-        'only_guest' => [
-            'hide-sm' => true,
-            'flag' => true,
-            'label' => 'Guest Only',
-            // 'onFalseClass' => 'fas fa-user text-danger',
-            'onTrueClass' => 'fas fa-user text-secondary',
-        ],
-        'parent_id' => [
-            // 'linkType' => 'fk',
-            // 'accessor' => 'parent',
-            'property' => 'title',
-            // 'linkRoute' => 'admin.resource.users.show',
-            'label' => 'Parent',
-        ],
-        'description' => [
-            'hide-sm' => true,
-            'label' => 'Description',
-            'html' => true,
+            'label' => 'Unknown',
+            'onTrueClass' => 'fa-solid fa-question text-warning',
         ],
     ],
 ])

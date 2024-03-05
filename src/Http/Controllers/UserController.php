@@ -247,34 +247,47 @@ class UserController extends Controller
         // $query = $uc::addSelect(sprintf('%1$s.*', $this->packageInfo['table']));
         $query = $user->query();
 
-        // $query->sort($validated['sort'] ?? null);
+        if (is_callable([$query, 'sort'])) {
+            $query->sort($validated['sort'] ?? null);
+        }
 
-        // if (! empty($validated['filter']) && is_array($validated['filter'])) {
-        //     $query->filterTrash($validated['filter']['trash'] ?? null);
+        if (! empty($validated['filter']) && is_array($validated['filter'])) {
 
-        //     $query->filterIds(
-        //         $request->getPaginationIds(),
-        //         $validated
-        //     );
+            if (is_callable([$query, 'filterTrash'])) {
+                $query->filterTrash($validated['filter']['trash'] ?? null);
+            }
 
-        //     $query->filterFlags(
-        //         $request->getPaginationFlags(),
-        //         $validated
-        //     );
+            if (is_callable([$query, 'filterIds'])) {
+                $query->filterIds(
+                    $request->getPaginationIds(),
+                    $validated
+                );
+            }
 
-        //     $query->filterDates(
-        //         $request->getPaginationDates(),
-        //         $validated
-        //     );
+            if (is_callable([$query, 'filterFlags'])) {
+                $query->filterFlags(
+                    $request->getPaginationFlags(),
+                    $validated
+                );
+            }
 
-        //     $query->filterColumns(
-        //         $request->getPaginationColumns(),
-        //         $validated
-        //     );
-        // }
+            if (is_callable([$query, 'filterDates'])) {
+                $query->filterDates(
+                    $request->getPaginationDates(),
+                    $validated
+                );
+            }
+
+            if (is_callable([$query, 'filterColumns'])) {
+                $query->filterColumns(
+                    $request->getPaginationColumns(),
+                    $validated
+                );
+            }
+        }
 
         $perUser = ! empty($validated['perUser']) && is_int($validated['perUser']) ? $validated['perUser'] : null;
-        $paginator = $query->paginate( $perUser);
+        $paginator = $query->paginate($perUser);
 
         $paginator->appends($validated);
 

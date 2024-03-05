@@ -28,7 +28,7 @@ class IndexRequest extends BaseIndexRequest
     protected array $paginationFlags = [
         'active' => ['column' => 'active', 'label' => 'Active', 'icon' => 'fa-solid fa-person-running'],
         'banned' => ['column' => 'banned', 'label' => 'Banned', 'icon' => 'fa-solid fa-ban text-warning'],
-        'flagged' => ['column' => 'flagged', 'label' => 'Flagged', 'icon' => 'fa-solid fa-flag'],
+        'flagged' => ['column' => 'flagged', 'label' => 'Flagged', 'icon' => 'fa-solid fa-flag text-warning'],
         'internal' => ['column' => 'internal', 'label' => 'Internal', 'icon' => 'fa-solid fa-server'],
         'locked' => ['column' => 'locked', 'label' => 'Locked', 'icon' => 'fa-solid fa-lock text-warning'],
         'problem' => ['column' => 'problem', 'label' => 'Problem', 'icon' => 'fa-solid fa-triangle-exclamation text-danger'],
@@ -50,6 +50,10 @@ class IndexRequest extends BaseIndexRequest
      * @var array<string, mixed>
      */
     protected array $paginationColumns = [
+        'name' => ['column' => 'name', 'label' => 'Name', 'type' => 'string', 'nullable' => false],
+        'email' => ['column' => 'email', 'label' => 'Email', 'type' => 'string', 'nullable' => false],
+        'locale' => ['column' => 'locale', 'label' => 'locale', 'type' => 'string', 'nullable' => false],
+        'timezone' => ['column' => 'timezone', 'label' => 'Timezone', 'type' => 'string', 'nullable' => false],
         'label' => ['column' => 'label', 'label' => 'Label', 'type' => 'string', 'nullable' => false],
         'title' => ['column' => 'title', 'label' => 'Title', 'type' => 'string', 'nullable' => false],
         'byline' => ['column' => 'byline', 'label' => 'Byline', 'type' => 'string', 'nullable' => false],

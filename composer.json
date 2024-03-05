@@ -27,11 +27,11 @@
     "require": {
         "php": "^8.1",
         "gammamatrix/playground-http": "dev-develop|dev-master|dev-feature/*|^73.0",
-        "gammamatrix/playground-site-blade": "dev-develop|dev-master|dev-feature/*|^73.0",
         "gammamatrix/playground-admin": "dev-develop|dev-master|dev-feature/*|^73.0"
     },
     "require-dev": {
         "gammamatrix/playground-test": "dev-develop|dev-master|dev-feature/*|^73.0",
+        "gammamatrix/playground-site-blade": "dev-develop|dev-master|dev-feature/*|^73.0",
         "tomasvotruba/bladestan": "^0.5.0"
     },
     "minimum-stability": "dev",

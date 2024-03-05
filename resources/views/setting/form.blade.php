@@ -1,5 +1,5 @@
 @extends('playground::layouts.resource.form', [
-    'withFormInfo' => 'playground-admin-resource::setting/form-info',
+    // 'withFormInfo' => 'playground-admin-resource::setting/form-info',
     'withFormStatus' => 'playground-admin-resource::setting/form-status',
 ])
 

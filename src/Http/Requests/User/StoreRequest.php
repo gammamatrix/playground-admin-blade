@@ -69,7 +69,7 @@ class StoreRequest extends BaseStoreRequest
         '_return_url' => ['nullable', 'url'],
     ];
 
-    protected string $slug_table = 'users';
+    protected string $slug_table = '';
 
     /**
      * Prepare the data for validation.
@@ -78,11 +78,11 @@ class StoreRequest extends BaseStoreRequest
      */
     protected function prepareForValidation()
     {
-        $table = config('playground-admin-resource.users.table');
+        // $table = config('playground-admin-resource.users.table');
 
-        if (! empty($table) && is_string($table)) {
-            $this->slug_table = $table;
-        }
+        // if (! empty($table) && is_string($table)) {
+        //     $this->slug_table = $table;
+        // }
 
         parent::prepareForValidation();
 
@@ -97,20 +97,12 @@ class StoreRequest extends BaseStoreRequest
         $this->filterStatus($input);
         $this->filterSystemFields($input);
 
-        if ($this->exists('title')) {
-            $input['title'] = isset($input['title']) ? $this->filterHtml($input['title']) : '';
-        }
-
-        if ($this->exists('label')) {
-            $input['label'] = isset($input['label']) ? $this->filterHtml($input['label']) : '';
-        }
-
         if ($this->exists('phone')) {
-            $input['phone'] = isset($input['phone']) ? $this->filterPhone($input['phone']) : '';
+            $input['phone'] = $this->filterPhone($this->input('phone'));
         }
 
         if ($this->exists('timezone')) {
-            $input['timezone'] = isset($input['timezone']) ? $this->filterHtml($input['timezone']) : '';
+            $input['timezone'] = $this->filterHtml($this->input('timezone'));
         }
 
         if (! empty($input)) {

@@ -4,5 +4,5 @@
 ])
 
 @section('form-tertiary')
-    @include('playground-admin-resource::user/form-publishing')
+    @include('playground-admin-resource::user/form-dates')
 @endsection
