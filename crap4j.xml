@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-03-04 03:13:47</timestamp>
+  <timestamp>2024-03-05 08:22:58</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>53</methodCount>
@@ -237,8 +237,8 @@
       <methodName>index</methodName>
       <methodSignature>index(Playground\Admin\Resource\Http\Requests\User\IndexRequest $request): \Illuminate\Http\JsonResponse|\Illuminate\View\View|\Playground\Admin\Resource\Http\Resources\UserCollection</methodSignature>
       <fullMethod>index(Playground\Admin\Resource\Http\Requests\User\IndexRequest $request): \Illuminate\Http\JsonResponse|\Illuminate\View\View|\Playground\Admin\Resource\Http\Resources\UserCollection</fullMethod>
-      <crap>4</crap>
-      <complexity>4</complexity>
+      <crap>12</crap>
+      <complexity>12</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -347,8 +347,8 @@
       <methodName>prepareForValidation</methodName>
       <methodSignature>prepareForValidation()</methodSignature>
       <fullMethod>prepareForValidation()</fullMethod>
-      <crap>4</crap>
-      <complexity>4</complexity>
+      <crap>2</crap>
+      <complexity>2</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -358,8 +358,8 @@
       <methodName>prepareForValidation</methodName>
       <methodSignature>prepareForValidation()</methodSignature>
       <fullMethod>prepareForValidation()</fullMethod>
-      <crap>4</crap>
-      <complexity>4</complexity>
+      <crap>2</crap>
+      <complexity>2</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -402,8 +402,8 @@
       <methodName>prepareForValidation</methodName>
       <methodSignature>prepareForValidation()</methodSignature>
       <fullMethod>prepareForValidation()</fullMethod>
-      <crap>7</crap>
-      <complexity>7</complexity>
+      <crap>5</crap>
+      <complexity>5</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -424,8 +424,8 @@
       <methodName>prepareForValidation</methodName>
       <methodSignature>prepareForValidation()</methodSignature>
       <fullMethod>prepareForValidation()</fullMethod>
-      <crap>7</crap>
-      <complexity>7</complexity>
+      <crap>5</crap>
+      <complexity>5</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
