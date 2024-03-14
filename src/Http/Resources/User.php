@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 namespace Playground\Admin\Resource\Http\Resources;
 
 use Illuminate\Database\Eloquent\Model;

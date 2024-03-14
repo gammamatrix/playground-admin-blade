@@ -1,9 +1,9 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Playground
- *
  */
-
 namespace Tests\Unit\Playground\Admin\Resource\Http\Controllers\UserController;
 
 use Playground\Admin\Resource\Http\Controllers\UserController;
@@ -13,7 +13,6 @@ use ValueError;
 
 /**
  * \Tests\Unit\Playground\Admin\Resource\Http\Controllers\UserController\InstanceTest
- *
  */
 class InstanceTest extends TestCase
 {

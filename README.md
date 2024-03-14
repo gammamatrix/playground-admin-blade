@@ -10,6 +10,9 @@ This package provides an API and a Blade UI for interacting with [Playground Adm
 
 ## Documentation
 
+Read more on using Playground Admin Resource [at the Read the Docs for Playground.](https://gammamatrix-playground.readthedocs.io/)
+
+
 ### Swagger
 
 This application provides Swagger documentation: [swagger.json](swagger.json).

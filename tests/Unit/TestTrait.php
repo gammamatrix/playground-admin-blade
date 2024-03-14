@@ -1,23 +1,22 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Playground
- *
  */
-
 namespace Tests\Unit\Playground\Admin\Resource;
 
-use Playground\ServiceProvider as PlaygroundServiceProvider;
+use Playground\Admin\Resource\ServiceProvider;
+use Playground\Admin\ServiceProvider as PlaygroundAdminServiceProvider;
 use Playground\Auth\ServiceProvider as PlaygroundAuthServiceProvider;
 use Playground\Blade\ServiceProvider as PlaygroundBladeServiceProvider;
 use Playground\Http\ServiceProvider as PlaygroundHttpServiceProvider;
-use Playground\Admin\ServiceProvider as PlaygroundAdminServiceProvider;
 use Playground\Login\Blade\ServiceProvider as PlaygroundLoginBladeServiceProvider;
+use Playground\ServiceProvider as PlaygroundServiceProvider;
 use Playground\Site\Blade\ServiceProvider as PlaygroundSiteBladeServiceProvider;
-use Playground\Admin\Resource\ServiceProvider;
 
 /**
  * \Tests\Unit\Playground\Admin\Resource\TestTrait
- *
  */
 trait TestTrait
 {

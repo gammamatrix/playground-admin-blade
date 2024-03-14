@@ -1,21 +1,18 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Playground
- *
  */
-
 namespace Tests\Unit\Playground\Admin\Resource\Http\Requests\FormRequest;
 
-use Illuminate\Support\Facades\Auth;
-use Playground\Http\Requests\StoreRequest;
-use Playground\Test\Models\User as DefaultLaravelUser;
-use Playground\Test\Models\PlaygroundUser as User;
-use Tests\Unit\Playground\Admin\Resource\TestCase;
 use Playground\Admin\Resource\Http\Requests\FormRequest;
+use Playground\Test\Models\PlaygroundUser as User;
+use Playground\Test\Models\User as DefaultLaravelUser;
+use Tests\Unit\Playground\Admin\Resource\TestCase;
 
 /**
  * \Tests\Unit\Playground\Admin\Resource\Http\Requests\FormRequest\InstanceTest
- *
  */
 class InstanceTest extends TestCase
 {

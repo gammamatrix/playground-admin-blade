@@ -1,9 +1,9 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Playground
- *
  */
-
 namespace Tests\Unit\Playground\Admin\Resource\Http\Requests\User;
 
 use Playground\Admin\Resource\Http\Requests\User\StoreRequest;
@@ -12,7 +12,6 @@ use Tests\Unit\Playground\Admin\Resource\Http\Requests\RequestTestCase;
 
 /**
  * \Tests\Unit\Playground\Admin\Resource\Http\Requests\User\StoreRequestTest
- *
  */
 class StoreRequestTest extends RequestTestCase
 {
