@@ -9,7 +9,7 @@
         "playground-blade",
         "playground"
     ],
-    "homepage": "https://github.com/gammamatrix/playground-admin-resource",
+    "homepage": "https://gammamatrix-playground.readthedocs.io/en/develop/components/admin.html",
     "license": "MIT",
     "authors": [
         {

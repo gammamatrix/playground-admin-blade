@@ -6,11 +6,9 @@
 
 The `playground-admin-resource` Laravel package.
 
-This package provides an API and a Blade UI for interacting with [Playground Admin](https://github.com/gammamatrix/playground-admin), a system administration tool for Laravel Projects.
-
 ## Documentation
 
-Read more on using Playground Admin Resource [at the Read the Docs for Playground.](https://gammamatrix-playground.readthedocs.io/)
+Read more on using [Playground Admin Resource at Read the Docs: Playground Documentation.](https://gammamatrix-playground.readthedocs.io/en/develop/components/admin.html)
 
 
 ### Swagger
