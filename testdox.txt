@@ -34,6 +34,8 @@ Instance (Tests\Unit\Playground\Admin\Resource\Http\Requests\FormRequest\Instanc
 Instance (Tests\Unit\Playground\Admin\Resource\ServiceProvider\Instance)
  [x] Version matches
  [x] SetPolicies with empty array
+ [x] SetPolicies with invalid model
+ [x] SetPolicies with invalid policy
 
 Policy (Tests\Unit\Playground\Admin\Resource\Policies\SettingPolicy\Policy)
  [x] Policy instance

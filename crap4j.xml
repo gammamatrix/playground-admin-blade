@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-03-17 07:59:06</timestamp>
+  <timestamp>2024-03-23 23:20:26</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>53</methodCount>
-    <crapMethodCount>1</crapMethodCount>
-    <crapLoad>8</crapLoad>
-    <totalCrap>252.05</totalCrap>
-    <crapMethodPercent>1.89</crapMethodPercent>
+    <crapMethodCount>0</crapMethodCount>
+    <crapLoad>0</crapLoad>
+    <totalCrap>205</totalCrap>
+    <crapMethodPercent>0</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -556,10 +556,10 @@
       <methodName>setPolicies</methodName>
       <methodSignature>setPolicies(array $policies): void</methodSignature>
       <fullMethod>setPolicies(array $policies): void</fullMethod>
-      <crap>57.05</crap>
+      <crap>10</crap>
       <complexity>10</complexity>
-      <coverage>22.22</coverage>
-      <crapLoad>8</crapLoad>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Admin\Resource</package>
