@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Playground
+ */
 declare(strict_types=1);
 namespace Playground\Admin\Resource\Http\Resources;
 
@@ -9,18 +11,11 @@ use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Carbon;
 use Playground\Admin\Resource\Http\Requests\FormRequest;
 
+/**
+ * \Playground\Admin\Resource\Http\Resources\User
+ */
 class User extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @return array<string, mixed>|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
-     */
-    public function toArray(Request $request)
-    {
-        return parent::toArray($request);
-    }
-
     /**
      * Get additional data that should be returned with the resource array.
      *

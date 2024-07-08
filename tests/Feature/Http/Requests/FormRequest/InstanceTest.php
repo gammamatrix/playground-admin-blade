@@ -8,7 +8,7 @@ namespace Tests\Feature\Playground\Admin\Resource\Http\Requests\FormRequest;
 
 use Illuminate\Support\Facades\Auth;
 use Playground\Admin\Resource\Http\Requests\FormRequest;
-use Playground\Test\Models\PlaygroundUser as User;
+use Playground\Models\User;
 use Tests\Feature\Playground\Admin\Resource\TestCase;
 
 /**

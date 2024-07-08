@@ -1,9 +1,9 @@
 <?php
-
-declare(strict_types=1);
 /**
  * Playground
  */
+
+declare(strict_types=1);
 namespace Tests\Unit\Playground\Admin\Resource\Http\Requests\User;
 
 use Playground\Admin\Resource\Http\Requests\User\StoreRequest;

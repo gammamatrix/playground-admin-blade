@@ -6,7 +6,7 @@ declare(strict_types=1);
  */
 namespace Tests\Feature\Playground\Admin\Resource\Http\Controllers\Playground;
 
-use Playground\Test\Models\PlaygroundUser as User;
+use Playground\Models\User;
 use Tests\Feature\Playground\Admin\Resource\TestCase;
 
 /**
@@ -14,9 +14,7 @@ use Tests\Feature\Playground\Admin\Resource\TestCase;
  */
 class IndexRouteTest extends TestCase
 {
-    use TestTrait;
-
-    protected bool $load_migrations_playground = true;
+    protected bool $setUpUserForPlayground = true;
 
     public function test_guest_cannot_render_index_view(): void
     {

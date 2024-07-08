@@ -13,12 +13,6 @@ use Tests\Feature\Playground\Admin\Resource\Http\Controllers\UserTestCase;
  */
 class UserRouteTest extends UserTestCase
 {
-    use TestTrait;
-
-    protected bool $load_migrations_playground = true;
-
-    protected bool $load_migrations_admin = true;
-
     protected int $status_code_guest_create = 302;
 
     protected int $status_code_json_guest_create = 401;
