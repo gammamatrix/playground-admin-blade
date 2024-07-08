@@ -83,6 +83,35 @@ Information on [environment variables is available on the wiki for this package]
 
 This package requires the migrations in [playground-admin](https://github.com/gammamatrix/playground-admin) a Laravel package.
 
+## Cloc
+
+```sh
+composer cloc
+```
+
+```
+➜  playground-admin-resource git:(develop) composer cloc
+> cloc --exclude-dir=output,vendor .
+     142 text files.
+      97 unique files.
+      46 files ignored.
+
+github.com/AlDanial/cloc v 1.98  T=0.16 s (595.4 files/s, 64488.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+PHP                             59            707            881           3340
+JSON                             3              0              0           2613
+YAML                            14              5              0           1731
+Blade                           15             70             15            783
+XML                              3              0              5            225
+Markdown                         2             41              1             74
+INI                              1              3              0             12
+-------------------------------------------------------------------------------
+SUM:                            97            826            902           8778
+-------------------------------------------------------------------------------
+```
+
 ## PHPStan
 
 Tests at level 9 on:
